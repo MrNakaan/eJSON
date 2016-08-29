@@ -1,0 +1,10 @@
+{
+	"name" : "string",
+	"key" : "string",
+	"version" : "string|number",
+	"config_file" : "string",
+	"config" : "object",
+	"value_array" : "array<string>",
+	"test_key" : "string",
+	"other_test_key" : "boolean"
+}

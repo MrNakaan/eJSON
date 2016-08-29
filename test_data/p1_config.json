@@ -1,0 +1,10 @@
+{
+	"variables" : [
+		"path/",
+		"<0>to/something/",
+		"a/<1>important"
+	],
+	"test_key" : "test_value",
+	"other_test_key" : false,
+    "variable_ref" : "<2>"
+}

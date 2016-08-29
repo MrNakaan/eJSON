@@ -1,0 +1,157 @@
+{
+    "data" : {
+        "c1" : {
+            "data" : {
+                "data" : {},
+                "other_test_key" : false,
+                "test_key" : "test_value",
+                "variable_ref" : "a/path/to/something/important",
+                "variables" : [
+                    "path/",
+                    "path/to/something/",
+                    "a/path/to/something/important"
+                ]
+            },
+            "file_hash" : "f82fdd058c229966b689437c2594745ef4a8f7ebbcef62355c7fc11b79dcfb9351ecf1d95fde0b62bef70df911c32e28b02cbdb492f856c9f7e780a2093b9045",
+            "file_name" : "test_data/c1.json",
+            "key" : "c1",
+            "name" : "c1"
+        },
+        "c2" : {
+            "data" : {
+                "other_test_key" : true,
+                "test_array_1" : [
+                    "foo",
+                    "bapath/name/to/something/r",
+                    "<baz>"
+                ],
+                "test_array_2" : [
+                    {
+                        "array" : [
+                            "a/path/name/to/something/a/path/name/to/something/path/name/path/name/to/something/"
+                        ],
+                        "key" : "path/name/path/name/",
+                        "key2" : "feh"
+                    },
+                    {
+                        "key" : "a/path/name/to/something/"
+                    }
+                ],
+                "test_key" : "test_value_replacement",
+                "test_number" : 5,
+                "test_replace" : "|{0}|",
+                "variables" : [
+                    "path/name/",
+                    "path/name/to/something/",
+                    "a/path/name/to/something/"
+                ]
+            },
+            "file_hash" : "106f047dc30e1f59d614a77c8562126316dbdf501b28245f7173bc0a7c4b40ae206ac6897d2de98b10582af6f81505716ee10f7644358b1f89aae501849d83bc",
+            "file_name" : "test_data/c2.json",
+            "key" : "c2",
+            "name" : "c2"
+        },
+        "c3" : {
+            "data" : {
+                "other_test_key" : false,
+                "test_array_1" : [
+                    "foo",
+                    "bapath/name/to/something/r",
+                    "<baz>"
+                ],
+                "test_array_2" : [
+                    {
+                        "array" : [
+                            "a/path/name/to/something/a/path/name/to/something/path/name/path/name/to/something/"
+                        ],
+                        "key" : "path/name/path/name/",
+                        "key2" : "feh"
+                    },
+                    {
+                        "key" : "a/path/name/to/something/"
+                    }
+                ],
+                "test_key" : "test_value",
+                "test_number" : 1,
+                "test_replace" : "|this also worked!|",
+                "variables" : [
+                    "path/name/",
+                    "path/name/to/something/",
+                    "a/path/name/to/something/"
+                ]
+            },
+            "file_hash" : "8b4175ae58574908138a75d3a6af97d6a5fb0b5a99dc632718f8fb0912f34f3dcc4991e8a75391d4f7d607e0cf9966772e1c3fcadb9358c5f5491c3f178ddd2d",
+            "file_name" : "test_data/children/c3.json",
+            "key" : "c3",
+            "name" : "c3"
+        },
+        "p1" : {
+            "data" : {
+                "data" : {},
+                "file_hash" : "13a05df9737ab7aafc134e9b7c86c8f5c6acf5ad09defdc7e0c73ceec0febf1f243bd46441884ba8db0eb838a8fa05681f9bc9960f85bd3867b2d0baf0fd3ae2",
+                "file_name" : "test_data/p1_config.json",
+                "other_test_key" : false,
+                "test_key" : "test_value",
+                "variable_ref" : "a/path/to/something/important",
+                "variables" : [
+                    "path/",
+                    "path/to/something/",
+                    "a/path/to/something/important"
+                ]
+            },
+            "data_file" : "test_data/p1_config.json",
+            "file_hash" : "cf08368ffd80112aeb5ee7e225a7dab968a4bfe7478326d958bd2301528ee9147e6d9f7c6bb0f6e47c86994c3f49983ba4e99c47caba208c083596cfd5a8ce76",
+            "file_name" : "test_data/p1.json",
+            "key" : "p1",
+            "name" : "p1",
+            "version" : ".1"
+        },
+        "p2" : {
+            "data" : {
+                "other_test_key" : true,
+                "test_array_1" : [
+                    "foo",
+                    "bapath/name/to/something/r",
+                    "<baz>"
+                ],
+                "test_array_2" : [
+                    {
+                        "array" : [
+                            "a/path/name/to/something/a/path/name/to/something/path/name/path/name/to/something/"
+                        ],
+                        "key" : "path/name/path/name/",
+                        "key2" : "feh"
+                    },
+                    {
+                        "key" : "a/path/name/to/something/"
+                    }
+                ],
+                "test_key" : "test_value",
+                "test_number" : 5,
+                "test_replace" : "|{0}|",
+                "variables" : [
+                    "path/name/",
+                    "path/name/to/something/",
+                    "a/path/name/to/something/"
+                ]
+            },
+            "file_hash" : "8af5d8903ad8aa69f0615ff7dee0e45db31323c73f3ed9dbfe42f337e217e58109fde7fa96b68b2e9954124c5a4a44439c19f58b234afeefc79824cfaf571ecc",
+            "file_name" : "test_data/parents/p2.json",
+            "key" : "p2",
+            "name" : "p2",
+            "version" : ".1"
+        }
+    },
+    "data_files" : [
+        "test_data/p1.json",
+        "test_data/parents/p2.json",
+        "test_data/c1.json",
+        "test_data/c2.json",
+        "test_data/children/c3.json"
+    ],
+    "file_hash" : "976aec77fe26d0ab1706c6e306992471d4e17f85159e0a69add60e03a57487f984487f8fa3db874b8ddc1865e6f1ccd40ea1082832fbfb116490e4dc80eb11db",
+    "file_name" : "config.json",
+    "filename" : "config.json",
+    "key_map_file" : "map.json",
+    "version" : ".1"
+}

@@ -1,0 +1,34 @@
+{
+	"name" : "c3",
+	"key" : "c3",
+	"extends" : "p2",
+	"data" : {
+		"mutations" : [
+			{
+				"mutation" : "overwrite",
+				"value" : "this worked!"
+			},
+			{
+				"key" : "",
+				"mutation" : "overwrite",
+				"value" : "this worked!"
+			},
+			{
+				"key" : "test_number",
+				"mutation" : "math.subtract.reverse",
+				"value" : 6
+			},
+			{
+				"key" : "other_test_key",
+				"mutation" : "toggle"
+			},
+			{
+				"key" : "test_replace",
+				"mutation" : "string.format",
+				"values" : [
+					"this also worked!"
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"name" : "p1",
+	"key" : "p1",
+	"version" : ".1",
+	"data_file" : "test_data/p1_config.json"
+}

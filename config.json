@@ -1,0 +1,13 @@
+{
+    "data_files": [
+        "test_data/p1.json",
+        "test_data/parents/p2.json",
+        "test_data/c1.json",
+        "test_data/c2.json",
+        "test_data/children/c3.json"
+    ],
+    "file_hash": "075a3c6b97f396266c50208edc67c52126dc1e49074176fcd2e508ec9c444818786fcf49b6c91db5b056ebcb5973278ec53afb55f3a74801fe6bb5bd25807ec9",
+    "filename": "config.json",
+    "key_map_file": "map.json",
+    "version": ".1"
+}
