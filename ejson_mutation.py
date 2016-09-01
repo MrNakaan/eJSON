@@ -15,6 +15,14 @@ def applyStringMutation(mutation, child, parentValue, childValue):
 			child[mutation["key"]] = parentValue.format(mutation["values"])
 		elif "value" in mutation.keys():
 			child[mutation["key"]] = parentValue.format(mutation["value"])
+	elif mutationString[1] == "append":
+		child[mutation["key"]] = parentValue + mutation["value"]
+	elif mutationString[1] == "prepend":
+		child[mutation["key"]] = mutation["value"] + parentValue
+	elif mutationString[1] == "wrap":
+		child[mutation["key"]] = mutation["value"] + parentValue + mutation["value"]
+	elif mutationString[1] == "enclose":
+		child[mutation["key"]] = parentValue + mutation["value"] + parentValue
 
 def applyMathMutation(mutation, child, parentValue, childValue):
 	mutationString = mutation["mutation"].split('.')
