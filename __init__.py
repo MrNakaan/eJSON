@@ -1,5 +1,6 @@
 __all__ = [
-	"build_root_json"
+	"build_root_json",
+	"install_json"
 ]
 
 import json, sys, os.path
@@ -8,7 +9,7 @@ from .ejson_util import e_print, hash_file
 from .ejson_mutation import apply_mutations
 from .ejson_variables import build_variables, insert_variables
 from .ejson_cycles import find_circular_inheritance
-from .ejson_install import install_json
+from .ejson_install import install
 
 keysNotToInherit = ["file_name", "file_hash", "comment"]
 
@@ -53,7 +54,7 @@ def inherit_config(configs, child):
 			return True
 
 def install_json(config, JSONToInstall):
-	install_json(config, JSONToInstall)
+	install(config, JSONToInstall)
 	save_config(config, "config.json")
 	
 def save_config(config, name, pretty_print=True):

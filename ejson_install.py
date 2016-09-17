@@ -9,7 +9,7 @@ def is_valid_path(json_location):
 	else:
 		return False
 
-def install_json(config, json_to_install):
+def install(config, json_to_install):
 	if not (isinstance(json_to_install, list) or isinstance(json_to_install, tuple) or isinstance(json_to_install, range)):
 		json_to_install = [json_to_install]
 	for j in json_to_install:
