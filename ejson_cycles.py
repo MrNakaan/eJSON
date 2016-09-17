@@ -1,31 +1,31 @@
 import re
 
-def findCircularVariableReferences(values):
+def find_circular_variable_references(values):
 	for v in values:
-		referenceGroup = [v]
-		toCheck = [v]
-		while len(toCheck) > 0:
-			references = re.findall("<([0-9]*?)>", toCheck[0])
+		reference_group = [v]
+		to_check = [v]
+		while len(to_check) > 0:
+			references = re.findall("<([0-9]*?)>", to_check[0])
 			if len(references) is not 0:
 				for r in references:
-					if values[int(r)] in referenceGroup:
-						referenceGroup.append(values[int(r)])
-						return referenceGroup
-					toCheck.append(values[int(r)])
-					referenceGroup.append(values[int(r)])
-			toCheck.remove(toCheck[0])
+					if values[int(r)] in reference_group:
+						reference_group.append(values[int(r)])
+						return reference_group
+					to_check.append(values[int(r)])
+					reference_group.append(values[int(r)])
+			to_check.remove(to_check[0])
 
-def findCircularInheritance(configs):
+def find_circular_inheritance(configs):
 	for c in configs.keys():
-		inheritanceGroup = [c]
-		toCheck = [c]
-		while len(toCheck) > 0:
-			if "extends" not in configs[toCheck[0]].keys():
+		inheritance_group = [c]
+		to_check = [c]
+		while len(to_check) > 0:
+			if "extends" not in configs[to_check[0]].keys():
 				break
-			extends = configs[toCheck[0]]["extends"]
-			if extends in inheritanceGroup:
-				inheritanceGroup.append(extends)
-				return inheritanceGroup
-			toCheck.append(extends)
-			inheritanceGroup.append(extends)
-			toCheck.remove(toCheck[0])
+			extends = configs[to_check[0]]["extends"]
+			if extends in inheritance_group:
+				inheritance_group.append(extends)
+				return inheritance_group
+			to_check.append(extends)
+			inheritance_group.append(extends)
+			to_check.remove(to_check[0])

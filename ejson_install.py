@@ -1,20 +1,20 @@
-import os.path, json
+import os.path
 
-from ejson_util import hashFile, ePrint
+from .ejson_util import e_print, hash_file
 
-def isValidPath(JSONInput):
+def is_valid_path(json_location):
 	# Accept file paths only
-	if os.path.isfile(JSONInput):
+	if os.path.isfile(json_location):
 		return True
 	else:
 		return False
 
-def installJSON(config, JSONToInstall):
-	if not (isinstance(JSONToInstall, list) or isinstance(JSONToInstall, tuple) or isinstance(JSONToInstall, range)):
-		JSONToInstall = [JSONToInstall]
-	for j in JSONToInstall:
-		if not isValidPath(j):
-			ePrint("Invalid path given for installation. Path: \"" + j + '"')
+def install_json(config, json_to_install):
+	if not (isinstance(json_to_install, list) or isinstance(json_to_install, tuple) or isinstance(json_to_install, range)):
+		json_to_install = [json_to_install]
+	for j in json_to_install:
+		if not is_valid_path(j):
+			e_print("Invalid path given for installation. Path: \"" + j + '"')
 			continue
 		config["data_files"].append(j)
-	config["file_hash"] = hashFile(config["file_name"])
+	config["file_hash"] = hash_file(config["file_name"])
